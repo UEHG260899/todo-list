@@ -9,21 +9,29 @@ import UIKit
 
 class CreateTaskViewController: UIViewController {
 
+    
+    @IBOutlet weak var titleLbl: UITextField!
+    @IBOutlet weak var subtitleLbl: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var createBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    
+    func setupUI(){
+        title = "New Task"
+        textView.layer.cornerRadius = 6.0
+        textView.layer.borderWidth = 2
+        textView.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
+        createBtn.layer.cornerRadius = 6.0
+        createBtn.layer.borderWidth = 2
+        createBtn.layer.borderColor = UIColor(red: 19/255, green: 132/255, blue: 1, alpha: 1).cgColor
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

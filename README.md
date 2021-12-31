@@ -17,26 +17,30 @@ If you want to clone this repo you will need to execute `pod install` in the pro
 
 **App Logo**:
 
-![Captura de Pantalla 2021-12-31 a la(s) 14.51.19.png](:/e3af00af05734007914bbe3f771ddedc)
+![App Logo](https://i.postimg.cc/B6H4syDR/Captura-de-Pantalla-2021-12-31-a-la-s-15-16-18.png)
 
 **Creating a new task:**
 
-![Captura de Pantalla 2021-12-31 a la(s) 14.52.06.png](:/69780f5735664d21bfc7eeb678deec06)
+![New Task](https://i.postimg.cc/GtjRTyXQ/Captura-de-Pantalla-2021-12-31-a-la-s-15-16-56.png)
 
 **Alerts on completion:**
 
-![Captura de Pantalla 2021-12-31 a la(s) 14.53.15.png](:/1cfa24f6ca9142e39830434e1006b970)
+![Completion alerts](https://i.postimg.cc/8cGDCHmc/Captura-de-Pantalla-2021-12-31-a-la-s-15-17-11.png)
 
 **To Do list:**
 
-![Captura de Pantalla 2021-12-31 a la(s) 14.54.51.png](:/1449c92973534e0ab6e7680173334568)
+![To do List](https://i.postimg.cc/PrtTsSqF/Captura-de-Pantalla-2021-12-31-a-la-s-15-16-31.png)
+
+**Mark as Done:**
+
+![As Done](https://i.postimg.cc/ZYP4MGJd/Captura-de-Pantalla-2021-12-31-a-la-s-15-17-28.png)
 
 # FAQs
 
-Q: Is this the final version?
+Q: Is this the final version?\
 A: Nope, just the first one, I plan to change the UI soon
 
-Q: Why not CoreData instead of Realm?
+Q: Why not CoreData instead of Realm?\
 A: In my opinion it's easier to work with Realm
 
 

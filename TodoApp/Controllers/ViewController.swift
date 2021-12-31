@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     func setupTableView() {
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "taskCell")
     }
     
     func setupUI(){
@@ -61,7 +62,13 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
+        cell.task = tasks[indexPath.row]
+        cell.setup()
+        cell.onClicked = {
+            //TODO: Navigate to other view
+        }
+        return cell
     }
     
 }

@@ -11,6 +11,8 @@
 		A459738D277E9FC500A5CB56 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459738C277E9FC500A5CB56 /* Task.swift */; };
 		A4597390277EACE800A5CB56 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459738F277EACE700A5CB56 /* UIUtils.swift */; };
 		A46A9C60277D43B90038BFCB /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A9C5F277D43B90038BFCB /* CreateTaskViewController.swift */; };
+		A46F4C83277F7B56004C2FE4 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F4C81277F7B56004C2FE4 /* TaskTableViewCell.swift */; };
+		A46F4C84277F7B56004C2FE4 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46F4C82277F7B56004C2FE4 /* TaskTableViewCell.xib */; };
 		A4F4C996277C118500EDAC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4C995277C118500EDAC7A /* AppDelegate.swift */; };
 		A4F4C998277C118500EDAC7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4C997277C118500EDAC7A /* SceneDelegate.swift */; };
 		A4F4C99A277C118500EDAC7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4C999277C118500EDAC7A /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		A459738C277E9FC500A5CB56 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A459738F277EACE700A5CB56 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		A46A9C5F277D43B90038BFCB /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		A46F4C81277F7B56004C2FE4 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		A46F4C82277F7B56004C2FE4 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		A4F4C992277C118500EDAC7A /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F4C995277C118500EDAC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4F4C997277C118500EDAC7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		A46A9C5B277D35190038BFCB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A46F4C80277F7B3A004C2FE4 /* Components */,
 				A4F4C9A0277C118700EDAC7A /* LaunchScreen.storyboard */,
 				A4F4C99B277C118500EDAC7A /* Main.storyboard */,
 			);
@@ -80,6 +85,15 @@
 				A46A9C5F277D43B90038BFCB /* CreateTaskViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A46F4C80277F7B3A004C2FE4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A46F4C81277F7B56004C2FE4 /* TaskTableViewCell.swift */,
+				A46F4C82277F7B56004C2FE4 /* TaskTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A4F4C989277C118500EDAC7A = {
@@ -192,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46F4C84277F7B56004C2FE4 /* TaskTableViewCell.xib in Resources */,
 				A4F4C9A2277C118700EDAC7A /* LaunchScreen.storyboard in Resources */,
 				A4F4C99F277C118700EDAC7A /* Assets.xcassets in Resources */,
 				A4F4C99D277C118500EDAC7A /* Main.storyboard in Resources */,
@@ -247,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46F4C83277F7B56004C2FE4 /* TaskTableViewCell.swift in Sources */,
 				A4F4C99A277C118500EDAC7A /* ViewController.swift in Sources */,
 				A4F4C996277C118500EDAC7A /* AppDelegate.swift in Sources */,
 				A459738D277E9FC500A5CB56 /* Task.swift in Sources */,

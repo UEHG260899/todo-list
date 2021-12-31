@@ -34,8 +34,11 @@ class CreateTaskViewController: UIViewController {
     }
     
     func validate() -> Bool {
-        //TODO : Validations
-        return true
+        var valid = true
+        valid = !titleTF.text!.isEmpty && valid
+        valid = !subtitleTF.text!.isEmpty && valid
+        valid = !textView.text.isEmpty && valid
+        return valid
     }
     
     func saveTask() {
@@ -57,6 +60,9 @@ class CreateTaskViewController: UIViewController {
         if validate(){
             saveTask()
             let alert = UIUtils.showAlert(tile: "Success", message: "Task Added!", type: .success, controller: self)
+            self.present(alert, animated: true)
+        }else{
+            let alert = UIUtils.showAlert(tile: "Warning", message: "You must complete all fields", type: .error, controller: self)
             self.present(alert, animated: true)
         }
     }

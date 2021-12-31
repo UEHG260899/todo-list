@@ -91,6 +91,9 @@
                                                 <rect key="frame" x="20" y="767" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Create"/>
+                                                <connections>
+                                                    <action selector="onClickedAdd:" destination="fgM-k2-34g" eventType="touchUpInside" id="YIf-IX-k4M"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,9 +130,9 @@
                     </view>
                     <connections>
                         <outlet property="createBtn" destination="Roj-uK-QBP" id="T6j-Ke-DTI"/>
-                        <outlet property="subtitleLbl" destination="N8W-v0-t2y" id="hFQ-XE-QU8"/>
+                        <outlet property="subtitleTF" destination="N8W-v0-t2y" id="OdH-8a-I8c"/>
                         <outlet property="textView" destination="va9-CB-EyN" id="7p1-dC-kEr"/>
-                        <outlet property="titleLbl" destination="h7q-If-oHc" id="Z3T-8p-uOR"/>
+                        <outlet property="titleTF" destination="h7q-If-oHc" id="L1A-Mq-CYt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UC-Ta-P6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

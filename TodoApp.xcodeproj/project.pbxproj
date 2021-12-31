@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1544B48EDF1E8EEBBFD54ACF /* Pods_TodoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9F6DD4735A0FD8CB2DE92F /* Pods_TodoApp.framework */; };
+		A459738D277E9FC500A5CB56 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459738C277E9FC500A5CB56 /* Task.swift */; };
+		A4597390277EACE800A5CB56 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459738F277EACE700A5CB56 /* UIUtils.swift */; };
 		A46A9C60277D43B90038BFCB /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A9C5F277D43B90038BFCB /* CreateTaskViewController.swift */; };
 		A4F4C996277C118500EDAC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4C995277C118500EDAC7A /* AppDelegate.swift */; };
 		A4F4C998277C118500EDAC7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4C997277C118500EDAC7A /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		3FED90809380F6BD3AD24259 /* Pods-TodoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp.release.xcconfig"; path = "Target Support Files/Pods-TodoApp/Pods-TodoApp.release.xcconfig"; sourceTree = "<group>"; };
 		7C9F6DD4735A0FD8CB2DE92F /* Pods_TodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A459738C277E9FC500A5CB56 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A459738F277EACE700A5CB56 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		A46A9C5F277D43B90038BFCB /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		A4F4C992277C118500EDAC7A /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F4C995277C118500EDAC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A459738B277E9FBA00A5CB56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A459738C277E9FC500A5CB56 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A459738E277EACD700A5CB56 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A459738F277EACE700A5CB56 /* UIUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A46A9C5B277D35190038BFCB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +103,8 @@
 		A4F4C994277C118500EDAC7A /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				A459738E277EACD700A5CB56 /* Utils */,
+				A459738B277E9FBA00A5CB56 /* Models */,
 				A46A9C5C277D35220038BFCB /* Controllers */,
 				A46A9C5B277D35190038BFCB /* Views */,
 				A4F4C995277C118500EDAC7A /* AppDelegate.swift */,
@@ -148,7 +170,7 @@
 				};
 			};
 			buildConfigurationList = A4F4C98D277C118500EDAC7A /* Build configuration list for PBXProject "TodoApp" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -227,6 +249,8 @@
 			files = (
 				A4F4C99A277C118500EDAC7A /* ViewController.swift in Sources */,
 				A4F4C996277C118500EDAC7A /* AppDelegate.swift in Sources */,
+				A459738D277E9FC500A5CB56 /* Task.swift in Sources */,
+				A4597390277EACE800A5CB56 /* UIUtils.swift in Sources */,
 				A4F4C998277C118500EDAC7A /* SceneDelegate.swift in Sources */,
 				A46A9C60277D43B90038BFCB /* CreateTaskViewController.swift in Sources */,
 			);

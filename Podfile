@@ -7,4 +7,5 @@ target 'TodoApp' do
 
   # Pods for TodoApp
   pod "Realm"
+  pod "RealmSwift"
 end

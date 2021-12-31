@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     }
     
     func setupTableView() {
+        tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "taskCell")
     }

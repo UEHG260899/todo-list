@@ -6,12 +6,35 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var tasks: Results<Task>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
+    }
+    
+    func fetchData() {
+        let realm = try! Realm()
+        tasks = realm.objects(Task.self)
+        tableView.reloadData()
+    }
+    
+    func setupTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "taskCell")
     }
     
     func setupUI(){
@@ -30,5 +53,24 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+}
+
+//MARK: - Delegates
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
+        cell.task = tasks[indexPath.row]
+        cell.setup()
+        cell.onClicked = {
+            //TODO: Navigate to other view
+        }
+        return cell
+    }
+    
 }
 

@@ -67,7 +67,9 @@ extension ViewController: UITableViewDataSource {
         cell.task = tasks[indexPath.row]
         cell.setup()
         cell.onClicked = {
-            //TODO: Navigate to other view
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EditTaskViewController") as! EditTaskViewController
+            vc.task = self.tasks[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         return cell
     }

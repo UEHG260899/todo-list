@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,7 +107,6 @@
 				B0A4658856A612A51F74483C /* Pods-TodoApp.debug.xcconfig */,
 				3FED90809380F6BD3AD24259 /* Pods-TodoApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,7 +148,7 @@
 				};
 			};
 			buildConfigurationList = A4F4C98D277C118500EDAC7A /* Build configuration list for PBXProject "TodoApp" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

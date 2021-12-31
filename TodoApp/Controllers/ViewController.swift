@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     func setupTableView() {
         tableView.tableFooterView = UIView()
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "taskCell")
     }
@@ -56,6 +57,21 @@ class ViewController: UIViewController {
 }
 
 //MARK: - Delegates
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Mark as Done"
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(tasks[indexPath.row])
+        }
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+}
+
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

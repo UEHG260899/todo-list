@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditTaskViewController: UIViewController {
 
@@ -40,5 +41,38 @@ class EditTaskViewController: UIViewController {
         titleTF.text = task.title
         subtitleTF.text = task.subTitle
         textView.text = task.descript
+    }
+    
+    
+    func validate() -> Bool {
+        var valid = true
+        valid = !titleTF.text!.isEmpty && valid
+        valid = !subtitleTF.text!.isEmpty && valid
+        valid = !textView.text.isEmpty && valid
+        return valid
+    }
+    
+    func saveData() {
+        let realm = try! Realm()
+        let realmTask = realm.objects(Task.self).where {
+            $0.id == self.task.id
+        }.first!
+        try! realm.write({
+            realmTask.title = titleTF.text!
+            realmTask.subTitle = subtitleTF.text!
+            realmTask.descript = textView.text
+        })
+    }
+    
+    
+    @IBAction func onClickedEdit(_ sender: Any) {
+        if validate() {
+            saveData()
+            let alert = UIUtils.showAlert(tile: "Success", message: "The task has been updated", type: .success, controller: self)
+            present(alert, animated: true)
+        }else {
+            let alert = UIUtils.showAlert(tile: "Warning", message: "All fields are required", type: .error, controller: self)
+            present(alert, animated: true)
+        }
     }
 }

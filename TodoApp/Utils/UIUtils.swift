@@ -31,4 +31,13 @@ class UIUtils {
         return alert
     }
     
+    static func customizeNavBar(for navController: UINavigationController){
+        navController.navigationBar.barStyle = .black
+        navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.isTranslucent = false
+        navController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+        navController.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
+        navController.navigationBar.tintColor = .white
+    }
+    
 }

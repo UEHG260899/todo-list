@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         let font = UIFont.systemFont(ofSize: 30.0)
         let rightItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(newTask))
         rightItem.setTitleTextAttributes([.font : font], for: .normal)
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = rightItem
     }
     

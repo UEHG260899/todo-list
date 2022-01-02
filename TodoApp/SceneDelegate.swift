@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let navController = UINavigationController(rootViewController: vc)
+        UIUtils.customizeNavBar(for: navController)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }

@@ -11,6 +11,7 @@ import RealmSwift
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cornerView: UIView!
     
     private var tasks: Results<Task>!
     
@@ -44,6 +45,8 @@ class ViewController: UIViewController {
         let rightItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(newTask))
         rightItem.setTitleTextAttributes([.font : font], for: .normal)
         navigationItem.rightBarButtonItem = rightItem
+        cornerView.layer.cornerRadius = 50
+        cornerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     

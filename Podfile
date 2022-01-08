@@ -8,4 +8,5 @@ target 'TodoApp' do
   # Pods for TodoApp
   pod "Realm"
   pod "RealmSwift"
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
 end

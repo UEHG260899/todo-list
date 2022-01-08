@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents
 
 enum AlertType {
     case success, error
@@ -38,6 +39,16 @@ class UIUtils {
         navController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
         navController.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
         navController.navigationBar.tintColor = .white
+    }
+    
+    static func setupTextFields(for tfs: [MDCOutlinedTextField : String]){
+        for (tf, tle) in tfs {
+            tf.setOutlineColor(.gray, for: .editing)
+            tf.setOutlineColor(.lightGray, for: .normal)
+            tf.label.text = tle
+            tf.setNormalLabelColor(.lightGray, for: .normal)
+            tf.setFloatingLabelColor(.gray, for: .editing)
+        }
     }
     
 }

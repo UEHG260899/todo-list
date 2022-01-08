@@ -21,24 +21,24 @@ If you want to clone this repo you will need to execute `pod install` in the pro
 
 **Creating a new task:**
 
-![New Task](https://i.postimg.cc/GtjRTyXQ/Captura-de-Pantalla-2021-12-31-a-la-s-15-16-56.png)
+![New Task](https://user-images.githubusercontent.com/67031721/148625124-836efb04-adec-4dea-9b4b-94a5ef699101.png)
 
 **Alerts on completion:**
 
-![Completion alerts](https://i.postimg.cc/8cGDCHmc/Captura-de-Pantalla-2021-12-31-a-la-s-15-17-11.png)
+![Alerts](https://user-images.githubusercontent.com/67031721/148625156-1d72beb0-d298-4be2-8e7e-43bdffc6212b.png)
 
 **To Do list:**
 
-![To do List](https://i.postimg.cc/PrtTsSqF/Captura-de-Pantalla-2021-12-31-a-la-s-15-16-31.png)
+![To Do List](https://user-images.githubusercontent.com/67031721/148625039-e3778241-49ee-42f4-be5a-0060ca1c61dd.png)
 
 **Mark as Done:**
 
-![As Done](https://i.postimg.cc/ZYP4MGJd/Captura-de-Pantalla-2021-12-31-a-la-s-15-17-28.png)
+![As Done](https://user-images.githubusercontent.com/67031721/148625203-ef5f4595-b242-451c-97d2-e419163496e0.png)
 
 # FAQs
 
 Q: Is this the final version?\
-A: Nope, just the first one, I plan to change the UI soon
+A: Probably yes, unless Realm or Material Components change drastically
 
 Q: Why not CoreData instead of Realm?\
 A: In my opinion it's easier to work with Realm

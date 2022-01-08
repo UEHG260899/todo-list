@@ -7,12 +7,13 @@
 
 import UIKit
 import RealmSwift
+import MaterialComponents
 
 class CreateTaskViewController: UIViewController {
 
     
-    @IBOutlet weak var titleTF: UITextField!
-    @IBOutlet weak var subtitleTF: UITextField!
+    @IBOutlet weak var titleTF: MDCOutlinedTextField!
+    @IBOutlet weak var subtitleTF: MDCOutlinedTextField!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var createBtn: UIButton!
     @IBOutlet weak var cornerView: UIView!
@@ -21,6 +22,7 @@ class CreateTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        UIUtils.setupTextFields(for: [ titleTF:"Title", subtitleTF:"Subtitle" ])
     }
     
     

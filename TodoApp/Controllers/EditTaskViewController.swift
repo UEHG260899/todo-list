@@ -15,6 +15,7 @@ class EditTaskViewController: UIViewController {
     @IBOutlet weak var subtitleTF: UITextField!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var cornerView: UIView!
     
     public var task: Task!
     
@@ -30,11 +31,13 @@ class EditTaskViewController: UIViewController {
     
     func setupUI() {
         title = "Edit Task"
+        cornerView.layer.cornerRadius = 50
+        cornerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         textView.layer.borderWidth = 2
         textView.layer.cornerRadius = 6.0
         textView.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
         editBtn.layer.borderWidth = 2
-        editBtn.layer.borderColor = UIColor(red: 19/255, green: 132/255, blue: 1, alpha: 1).cgColor
+        editBtn.layer.borderColor = UIColor.black.cgColor
     }
     
     func setup() {
